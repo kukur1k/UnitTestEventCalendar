@@ -1,2 +1,40 @@
-CalendarManagment Library
+# CalendarManagment Library
+## Описание
 Библиотека CalendarManagment предназначена для работы с событиями и ведения списка событий. Она предоставляет функционал для добавления, изменения и поиска событий (с фильтрацией по свойствам). Библиотека реализована в виде .NET DLL. 
+## Класс Event
+### Конструктор: public Event( string eventname, string description,  DateTime eventDateTime, TypesEvent eventType, string eventOrginezer, List<string> participants)
+- инициализирует объект класса Event - само событие
+### public static void ResetID() 
+- сбрасывает счетчик событий
+## Класс CalendarManagment
+### private List<Event> _eventsList
+- инициализирует список для хранения событий
+### AddEventInCalendar(string eventname, string description, DateTime eventDateTime, TypesEvent eventType, string eventOrginezer, List<string> participants)
+- Метод для добавления события в список (если событие не инициализировано)
+### AddEventIncalendar(Event ev)
+- Метод для добавления события в список (если событие уже создано)
+### DeleteEventInCalendar(int eventId)
+- Метод для удаления события по ID
+### EditEventName(int eventId, string newEventName)
+- Метод для смены наименования события
+### EditEventDescription(int eventId, string newEventDescription)
+- Метод для смены описания события
+### EditEventDateTime(int eventId, DateTime newEventDateTime)
+- Метод для смены Даты-времени начала события
+### EditEventOrginezer(int eventId, string newEventOrginezer)
+- Метод для смены организатора события
+### GetEventByID(int eventId)
+- Метод для получения события по ID
+### GetAllEvents()
+- Метод возвращающий список всех событий
+### GetEventsByDate(DateTime eventDateTime)
+- Метод возвращающий список событий по дате (фильтрация).
+- Метод сравнивает дату, независимо от времени
+### GetEventsByType(TypesEvent Type)
+- Метод возвращающий список событий по типу события (фильтрация)
+### GetEventsByOrginezer(string orginezer)
+- Метод для печати информации о событиях по Организатору(фильтрация)
+### GetCountEvent()
+- Метод возвращающий общее количество событий
+### GetEventByListOfParticipants(List<string> participants)
+- Метод для получения событий по списку участников
