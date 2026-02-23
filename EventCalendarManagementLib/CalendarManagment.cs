@@ -2,9 +2,19 @@ namespace CalendarManagerLibrary;
 
 public class CalendarManagment
 {
+    // List для хранения событий (объекты класса Event)
     private List<Event> _eventsList = new List<Event>();
 
-    //============Добавление===========
+    
+    /// <summary>
+    /// Метод для добавления события в список (если событие не инициализировано)
+    /// </summary>
+    /// <param name="eventname">наименования события</param>
+    /// <param name="description">описание</param>
+    /// <param name="eventDateTime">дата-время начала</param>
+    /// <param name="eventType">тип события</param>
+    /// <param name="eventOrginezer">Организатор</param>
+    /// <param name="participants"> список участников</param>
     public void AddEventInCalendar(
         string eventname,
         string description, 
@@ -17,7 +27,11 @@ public class CalendarManagment
         _eventsList.Add(newEv);
     }
 
-    //Вариант с готовым событием
+    /// <summary>
+    /// Метод для добавления события в список (если событие уже создано)
+    /// </summary>
+    /// <param name="ev"> событие (объект класса Event)</param>
+    /// <exception cref="Exception"></exception>
     public void AddEventIncalendar(Event ev)
     {
         foreach (var item in _eventsList)
@@ -30,7 +44,11 @@ public class CalendarManagment
         _eventsList.Add(ev);
     }
 
-    //============Удаление===========
+    /// <summary>
+    /// Метод для удаления события
+    /// </summary>
+    /// <param name="eventId">ID события</param>
+    /// <exception cref="Exception"></exception>
     public void DeleteEventInCalendar(int eventId)
     {
 
@@ -45,6 +63,12 @@ public class CalendarManagment
     }
 
     //============Изменения параметров===========
+
+    /// <summary>
+    /// Метод для смены наименования события
+    /// </summary>
+    /// <param name="eventId">ID события</param>
+    /// <param name="newEventName">Новое наименование события</param>
     public void EditEventName(int eventId, string newEventName)
     {
         foreach (var item in _eventsList)
@@ -55,6 +79,12 @@ public class CalendarManagment
             }
         }
     }
+
+    /// <summary>
+    /// Метод для смены описания события
+    /// </summary>
+    /// <param name="eventId">ID события</param>
+    /// <param name="newEventDescription">Новое описание события</param>
     public void EditEventDescription(int eventId, string newEventDescription)
     {
         foreach (var item in _eventsList)
@@ -65,6 +95,12 @@ public class CalendarManagment
             }
         }
     }
+
+    /// <summary>
+    /// Метод для смены Даты-времени начала события
+    /// </summary>
+    /// <param name="eventId">ID события</param>
+    /// <param name="newEventDateTime"> Новая Дата-время начала события</param>
     public void EditEventDateTime(int eventId, DateTime newEventDateTime)
     {
         foreach (var item in _eventsList)
@@ -75,6 +111,12 @@ public class CalendarManagment
             }
         }
     }
+
+    /// <summary>
+    /// Метод для смены организатора события
+    /// </summary>
+    /// <param name="eventId">ID события</param>
+    /// <param name="newEventOrginezer">Новый организатор события</param>
     public void EditEventOrginezer(int eventId, string newEventOrginezer)
     {
         foreach (var item in _eventsList)
@@ -86,7 +128,10 @@ public class CalendarManagment
         }
     }
     
-    //============Печать информации о событии по ID============
+    /// <summary>
+    /// Метод для печати информации о событии по ID
+    /// </summary>
+    /// <param name="eventId">ID события</param>
     public void ShowEventByID(int eventId)
     {
         foreach (var item in _eventsList)
@@ -111,6 +156,11 @@ public class CalendarManagment
     }
 
     //============Печать информации о событии (принимает список событий)============
+
+    /// <summary>
+    /// Метод для печати информации о событиях из произвольного списка событий (Объектов класса Event)
+    /// </summary>
+    /// <param name="listEv">Список события</param>
     public void ShowEvents(List<Event> listEv)
     {
         foreach (var item in listEv)
@@ -132,7 +182,12 @@ public class CalendarManagment
         }
     }
 
-    //============Получение события по ID============
+
+    /// <summary>
+    /// Метод для получения события по ID
+    /// </summary>
+    /// <param name="eventId">ID события</param>
+    /// <returns>Событие (Event)</returns>
     public Event GetEventByID(int eventId)
     {
         foreach (var item in _eventsList)
@@ -145,7 +200,10 @@ public class CalendarManagment
         return null;
     }
 
-    //============Печать всех событий============
+    
+    /// <summary>
+    /// Метод для печати всех событий
+    /// </summary>
     public void ShowAllEvents()
     {
         foreach (var item in _eventsList)
@@ -154,13 +212,19 @@ public class CalendarManagment
         }
     }
 
-    //============Получение всех событий============
+    /// <summary>
+    /// Метод возвращающий список всех событий
+    /// </summary>
+    /// <returns>Список событий (List<Event>)</returns>
     public List<Event> GetAllEvents()
     {
         return _eventsList;
     }
     
-    //============Печать информации о событии по дате============
+    /// <summary>
+    /// Метод для печати информации о событии по дате
+    /// </summary>
+    /// <param name="eventDateTime">Дата-время начала события</param>
     public void ShowEventsByDate(DateTime eventDateTime)
     {
         foreach (var item in _eventsList)
@@ -173,13 +237,21 @@ public class CalendarManagment
     }
 
 
-    //============Получение информации о событиях по дате============
+    /// <summary>
+    /// Метод возвращающий список событий по дате (фильтрация).
+    /// Метод сравнивает дату, независимо от времени
+    /// </summary>
+    /// <param name="eventDateTime">Дата-время начала события</param>
+    /// <returns>Список событий (List<Event>)</returns>
     public List<Event> GetEventsByDate(DateTime eventDateTime)
     {
         return _eventsList.Where(x => x._eventDateTime.Date == eventDateTime.Date).ToList();
     }
-    
-    //============Печать информации о событиях по типу============
+
+    /// <summary>
+    /// Метод для печати информации о событиях по типу события (фильтрация)
+    /// </summary>
+    /// <param name="Type">Тип события (Объект enum TypesEvent)</param>
     public void ShowEventsByType(TypesEvent Type)
     {
         foreach (var item in _eventsList)
@@ -191,14 +263,21 @@ public class CalendarManagment
         }
     }
 
-    //============Получение информации о событиях по типу============
+    /// <summary>
+    /// Метод возвращающий список событий по типу события (фильтрация)
+    /// </summary>
+    /// <param name="Type">Тип события (Объект enum TypesEvent)</param>
+    /// <returns>Список событий (List<Event>)</returns>
     public List<Event> GetEventsByType(TypesEvent Type)
     {
         return _eventsList.Where(x => x._eventType == Type).ToList();
     }
 
 
-    //============Печать информации о событиях по организатору============
+    /// <summary>
+    /// Метод для печати информации о событиях по Организатору(фильтрация)
+    /// </summary>
+    /// <param name="orginezer">Организатор события</param>
     public void ShowEventsByOrginezer(string orginezer)
     {
         foreach (var item in _eventsList)
@@ -209,33 +288,47 @@ public class CalendarManagment
             }
         }
     }
-    
-    //============Получение информации о событиях по организатору============
+
+    /// <summary>
+    /// Метод возвращающий список событий по Организатору (фильтрация)
+    /// </summary>
+    /// <param name="orginezer">Организатор</param>
+    /// <returns>Список событий (List<Event>)</returns>
     public List<Event> GetEventsByOrginezer(string orginezer)
     {
         return _eventsList.Where(x => x._eventOrginezer == orginezer).ToList();
     }
 
-    //============Получение количества событий============
+    /// <summary>
+    /// Метод возвращающий общее количество событий
+    /// </summary>
+    /// <returns>Количество (int)</returns>
     public int GetCountEvent()
     {
         return _eventsList.Count;
     }
 
-    //============Печать количества событий============
+    /// <summary>
+    /// Метод для печати общего количества событий
+    /// </summary>
     public void ShowCountEvent()
     {
         Console.WriteLine($"Количество событий - {this.GetCountEvent()}");
     }
 
 
-    //============Получение информации о событиях по списку участников============
+    /// <summary>
+    /// Метод для получения событий по списку участников
+    /// </summary>
+    /// <param name="participants"></param>
+    /// <returns>Список событий (List<Event>)</returns>
     public List<Event> GetEventByListOfParticipants(List<string> participants)
     {
         List<Event> events = new List<Event>();
-        bool flag = false;
+        
         foreach (var item in _eventsList)
         {
+            bool flag = false;
             foreach (var participant in participants) {
                 if (item._participants.Contains(participant))
                 {
@@ -245,6 +338,8 @@ public class CalendarManagment
             if (flag) { events.Add(item); }
         }
         return events;
+
+
     }
 
 }

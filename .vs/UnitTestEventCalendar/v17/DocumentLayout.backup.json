@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\C#_Project\\UnitTestEventCalendar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64926C5C-B13A-450F-92CD-DF21AD18BBD2}|UnitTestEventCalendar\\UnitTestEventCalendar.csproj|d:\\c#_project\\unittesteventcalendar\\unittesteventcalendar\\testcalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64926C5C-B13A-450F-92CD-DF21AD18BBD2}|UnitTestEventCalendar\\UnitTestEventCalendar.csproj|solutionrelative:unittesteventcalendar\\testcalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{60E40691-9775-463A-90B5-0AA628489557}|EventCalendarManagementLib\\EventCalendarManagementLib.csproj|d:\\c#_project\\unittesteventcalendar\\eventcalendarmanagementlib\\calendarmanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60E40691-9775-463A-90B5-0AA628489557}|EventCalendarManagementLib\\EventCalendarManagementLib.csproj|solutionrelative:eventcalendarmanagementlib\\calendarmanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60E40691-9775-463A-90B5-0AA628489557}|EventCalendarManagementLib\\EventCalendarManagementLib.csproj|d:\\c#_project\\unittesteventcalendar\\eventcalendarmanagementlib\\typesevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60E40691-9775-463A-90B5-0AA628489557}|EventCalendarManagementLib\\EventCalendarManagementLib.csproj|solutionrelative:eventcalendarmanagementlib\\typesevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64926C5C-B13A-450F-92CD-DF21AD18BBD2}|UnitTestEventCalendar\\UnitTestEventCalendar.csproj|d:\\c#_project\\unittesteventcalendar\\unittesteventcalendar\\testcalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64926C5C-B13A-450F-92CD-DF21AD18BBD2}|UnitTestEventCalendar\\UnitTestEventCalendar.csproj|solutionrelative:unittesteventcalendar\\testcalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60E40691-9775-463A-90B5-0AA628489557}|EventCalendarManagementLib\\EventCalendarManagementLib.csproj|d:\\c#_project\\unittesteventcalendar\\eventcalendarmanagementlib\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +34,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TypesEvent.cs",
               "DocumentMoniker": "D:\\C#_Project\\UnitTestEventCalendar\\EventCalendarManagementLib\\TypesEvent.cs",
               "RelativeDocumentMoniker": "EventCalendarManagementLib\\TypesEvent.cs",
               "ToolTip": "D:\\C#_Project\\UnitTestEventCalendar\\EventCalendarManagementLib\\TypesEvent.cs",
               "RelativeToolTip": "EventCalendarManagementLib\\TypesEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T17:03:55.449Z"
+              "WhenOpened": "2026-02-23T17:03:55.449Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,26 +59,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TestCalendar.cs",
               "DocumentMoniker": "D:\\C#_Project\\UnitTestEventCalendar\\UnitTestEventCalendar\\TestCalendar.cs",
               "RelativeDocumentMoniker": "UnitTestEventCalendar\\TestCalendar.cs",
               "ToolTip": "D:\\C#_Project\\UnitTestEventCalendar\\UnitTestEventCalendar\\TestCalendar.cs",
               "RelativeToolTip": "UnitTestEventCalendar\\TestCalendar.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAqwNkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAP0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T17:05:31.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CalendarManagment.cs",
               "DocumentMoniker": "D:\\C#_Project\\UnitTestEventCalendar\\EventCalendarManagementLib\\CalendarManagment.cs",
               "RelativeDocumentMoniker": "EventCalendarManagementLib\\CalendarManagment.cs",
               "ToolTip": "D:\\C#_Project\\UnitTestEventCalendar\\EventCalendarManagementLib\\CalendarManagment.cs",
               "RelativeToolTip": "EventCalendarManagementLib\\CalendarManagment.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAgwPkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADQBAAAAAAAAAADwv0MBAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-23T17:03:52.616Z",
               "EditorCaption": ""
