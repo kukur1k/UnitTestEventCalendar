@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestEventCalendar", "UnitTestEventCalendar\UnitTestEventCalendar.csproj", "{64926C5C-B13A-450F-92CD-DF21AD18BBD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventCalendarManagementLib", "EventCalendarManagementLib\EventCalendarManagementLib.csproj", "{60E40691-9775-463A-90B5-0AA628489557}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64926C5C-B13A-450F-92CD-DF21AD18BBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64926C5C-B13A-450F-92CD-DF21AD18BBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64926C5C-B13A-450F-92CD-DF21AD18BBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64926C5C-B13A-450F-92CD-DF21AD18BBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E40691-9775-463A-90B5-0AA628489557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E40691-9775-463A-90B5-0AA628489557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E40691-9775-463A-90B5-0AA628489557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E40691-9775-463A-90B5-0AA628489557}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E77CA130-79A0-47E1-AD37-1A6E41502445}
+	EndGlobalSection
+EndGlobal
