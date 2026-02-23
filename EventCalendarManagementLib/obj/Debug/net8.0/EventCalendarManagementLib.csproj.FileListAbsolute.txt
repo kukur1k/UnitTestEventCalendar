@@ -9,3 +9,4 @@ D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\
 D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\refint\EventCalendarManagementLib.dll
 D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.pdb
 D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\ref\EventCalendarManagementLib.dll
+D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.sourcelink.json

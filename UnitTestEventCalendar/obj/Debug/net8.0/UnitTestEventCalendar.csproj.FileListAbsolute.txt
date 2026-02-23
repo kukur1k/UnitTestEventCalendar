@@ -386,3 +386,4 @@ D:\C#_Project\UnitTestEventCalendar\UnitTestEventCalendar\obj\Debug\net8.0\refin
 D:\C#_Project\UnitTestEventCalendar\UnitTestEventCalendar\obj\Debug\net8.0\UnitTestEventCalendar.pdb
 D:\C#_Project\UnitTestEventCalendar\UnitTestEventCalendar\obj\Debug\net8.0\UnitTestEventCalendar.genruntimeconfig.cache
 D:\C#_Project\UnitTestEventCalendar\UnitTestEventCalendar\obj\Debug\net8.0\ref\UnitTestEventCalendar.dll
+D:\C#_Project\UnitTestEventCalendar\UnitTestEventCalendar\obj\Debug\net8.0\UnitTestEventCalendar.sourcelink.json

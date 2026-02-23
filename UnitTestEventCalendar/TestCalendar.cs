@@ -16,8 +16,10 @@ public class calendarTest
     [SetUp]
     public void Setup()
     {
+        //Сброс ID событий для корректности тестов
         CalendarManagerLibrary.Event.ResetID();
 
+        //Инициализация нескольких событий для тестирования
         event1 = new CalendarManagerLibrary.Event(
         "Event1",
         "Is event number 1",
@@ -29,7 +31,7 @@ public class calendarTest
         event2 = new CalendarManagerLibrary.Event(
         "Event2",
         "Is event number 2",
-        new DateTime(2026, 8, 20, 18, 30, 25),
+        new DateTime(2026, 7, 20, 15, 30, 20),
         TypesEvent.Birthday,
         "Orginezer 2",
         new List<string> { "participant 1", "participant 2", "participant 4" });
@@ -42,6 +44,7 @@ public class calendarTest
         "Orginezer 3",
         new List<string> { "participant 1", "participant 2", "participant 5" });
 
+        //Добавление событий в список
         _eventManagment = new CalendarManagment();
         _eventManagment.AddEventIncalendar(event1);
         _eventManagment.AddEventIncalendar(event2);
@@ -49,6 +52,7 @@ public class calendarTest
 
     }
 
+    //Тест для проверки успешного добавления события
     [Test]
     public void WorkWithEventList_AddEvent_SuccessAdding()
     {
@@ -70,6 +74,7 @@ public class calendarTest
 
     }
 
+    //Тест для проверки обработки попытки добавления уже существующего события
     [Test]
     public void WorkWithEventList_AddEvent_DublicateError()
     {
@@ -90,6 +95,7 @@ public class calendarTest
         Assert.That(exception.Message, Is.EqualTo("This Event already exsist"));
     }
 
+    //Тест для проверки успешного удаления события по ID
     [Test]
     public void WorkWithEventList_DeleteEvent_SuccessDelete()
     {
@@ -100,6 +106,7 @@ public class calendarTest
         Assert.That(NewCountIvent, Is.EqualTo(CountIvent - 1));
     }
 
+    //Тест для проверки обработки попытки удаления не существующего события
     [Test]
     public void WorkWithEventList_DeleteEvent_ErrorDelete()
     {
@@ -111,6 +118,7 @@ public class calendarTest
         Assert.That(exception.Message, Is.EqualTo("This Event does not exist"));
     }
 
+    //Тест для проверки успешного изменения описания события
     [Test]
     public void WorkWithEventList_EditEventDescription()
     {
@@ -122,6 +130,7 @@ public class calendarTest
         Assert.That(newDesc, Is.EqualTo(desc + "-- is new description"));
     }
 
+    //Тест для проверки успешного изменения наименования события
     [Test]
     public void WorkWithEventList_EditEventName()
     {
@@ -133,6 +142,7 @@ public class calendarTest
         Assert.That(newName, Is.EqualTo(name + "-- is new Name"));
     }
 
+    //Тест для проверки успешного изменения даты (дата-время) события
     [Test]
     public void WorkWithEventList_EditEventDateTime()
     {
@@ -141,9 +151,10 @@ public class calendarTest
         _eventManagment.EditEventDateTime(2, DT.AddHours(1));
         DateTime newDT = events[1]._eventDateTime;
 
-        Assert.That(newDT, Is.EqualTo(DT.AddHours(1)));
+        Assert.That(newDT, Is.EqualTo(new DateTime(2026, 7, 20, 16, 30, 20)));
     }
 
+    //Тест для проверки успешного изменения организатора события
     [Test]
     public void WorkWithEventList_EditEventOrginezer()
     {
@@ -155,6 +166,7 @@ public class calendarTest
         Assert.That(newOrg, Is.EqualTo("New orginezer"));
     }
 
+    //Тест для проверки успешного получения события по ID
     [Test]
     public void WorkWithEventList_GetEventById_SuccessGet()
     {
@@ -162,6 +174,7 @@ public class calendarTest
         Assert.That(ev, Is.EqualTo(event1));
     }
 
+    //Тест для проверки обработки попытки получения несуществующего события по ID
     [Test]
     public void WorkWithEventList_GetEventById_GetNull()
     {
@@ -169,6 +182,7 @@ public class calendarTest
         Assert.That(ev, Is.EqualTo(null));
     }
 
+    //Тест для проверки успешного получения списка всех событий
     [Test]
     public void WorkWithEventList_GetAllEvents()
     {
@@ -187,27 +201,34 @@ public class calendarTest
 
     }
 
+    //Тест для проверки успешного получения событий по дате
     [Test]
     public void WorkWithEventList_GetEventsByDate()
     {
         List<CalendarManagerLibrary.Event> events =
             _eventManagment.GetEventsByDate(new DateTime(2026, 7, 20, 18, 30, 25));
-        CalendarManagerLibrary.Event ev = events[0];
 
-        Assert.That(ev._eventId, Is.EqualTo(1));
+        Assert.Multiple(() =>
+        {
+            Assert.That(events[0]._eventId, Is.EqualTo(1));
+            Assert.That(events[1]._eventId, Is.EqualTo(2));
+        });
+
+        
 
     }
 
+    //Тест для проверки успешного получения события по ID
     [Test]
     public void WorkWithEventList_GetEventsByType()
     {
         List<CalendarManagerLibrary.Event> events =
             _eventManagment.GetEventsByType(TypesEvent.Birthday);
-        CalendarManagerLibrary.Event ev = events[0];
 
-        Assert.That(ev._eventType, Is.EqualTo(TypesEvent.Birthday));
+        Assert.That(events[0]._eventType, Is.EqualTo(TypesEvent.Birthday));
     }
 
+    //Тест для проверки успешного получения колиества событий
     [Test]
     public void WorkWithEventList_GetCountEvents()
     {
@@ -215,44 +236,40 @@ public class calendarTest
         Assert.That(count, Is.EqualTo(3));
     }
 
-    [Test]
-    public void WorkWithEventList_GetEventByParticipant()
-    {
-        List<CalendarManagerLibrary.Event> events =
-            _eventManagment.GetEventsByParticipant("participant 3");
-        CalendarManagerLibrary.Event ev = events[0];
 
-        Assert.That(ev._eventId, Is.EqualTo(1));
-    }
-
+    //Тест для проверки успешного получения событий по списку участников
     [Test]
     public void WorkWithEventList_GetEventByListOfParticipants_ReturnAllEvents()
     {
         List<CalendarManagerLibrary.Event> events =
             _eventManagment.GetEventByListOfParticipants(new List<string> { "participant 1", "participant 2" });
-        CalendarManagerLibrary.Event ev = events[0];
 
-        Assert.That(ev._eventId, Is.EqualTo(1));
+        Assert.Multiple(() =>
+        {
+            Assert.That(events[0]._eventId, Is.EqualTo(1));
+            Assert.That(events[1]._eventId, Is.EqualTo(2));
+            Assert.That(events[2]._eventId, Is.EqualTo(3));
+        });
     }
 
+    //Тест для проверки успешного получения событий по списку участников (при одиночном совпадении)
     [Test]
-    public void WorkWithEventList_GetEventByListOfParticipants_ReturnFirstEvents()
+    public void WorkWithEventList_GetEventByListOfParticipants_ReturnOneEvents()
     {
         List<CalendarManagerLibrary.Event> events =
             _eventManagment.GetEventByListOfParticipants(new List<string> { "participant 1", "participant 3" });
-        CalendarManagerLibrary.Event ev = events[0];
 
-        Assert.That(ev._eventId, Is.EqualTo(1));
+        Assert.That(events[0]._eventId, Is.EqualTo(1));
     }
 
+    //Тест для проверки успешного получения события по организатору
     [Test]
     public void WorkWithEventList_GetEventByOrginezer()
     {
         List<CalendarManagerLibrary.Event> events =
             _eventManagment.GetEventsByOrginezer("Orginezer 1");
-        CalendarManagerLibrary.Event ev = events[0];
 
-        Assert.That(ev._eventId, Is.EqualTo(1));
+        Assert.That(events[0]._eventId, Is.EqualTo(1));
     }
 
 }

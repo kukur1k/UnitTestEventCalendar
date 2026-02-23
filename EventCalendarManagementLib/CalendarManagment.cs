@@ -228,23 +228,6 @@ public class CalendarManagment
         Console.WriteLine($"Количество событий - {this.GetCountEvent()}");
     }
 
-    //============Получение информации о событиях по участнику============
-    public List<Event> GetEventsByParticipant(string participant)
-    {
-        return _eventsList.Where(x => x._participants.Contains(participant)).ToList();
-    }
-
-    //============Печать информации о событиях по участнику============
-    public void ShowEventByParticipant(string participant)
-    {
-        foreach (var item in _eventsList)
-        {
-            if (item._participants.Contains(participant))
-            {
-                ShowEventByID(item._eventId);
-            }
-        }
-    }
 
     //============Получение информации о событиях по списку участников============
     public List<Event> GetEventByListOfParticipants(List<string> participants)
