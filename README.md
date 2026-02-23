@@ -11,6 +11,13 @@
 - инициализирует список для хранения событий
 ### AddEventInCalendar(string eventname, string description, DateTime eventDateTime, TypesEvent eventType, string eventOrginezer, List<string> participants)
 - Метод для добавления события в список (если событие не инициализировано)
+- Параметры:
+  -- eventname: наименование
+  -- description: описание
+  -- eventDateTime: Дата-время начала
+  -- eventType: тип события
+  -- eventOrginezer: Организатор события
+  -- participants: Список участников
 ### AddEventIncalendar(Event ev)
 - Метод для добавления события в список (если событие уже создано)
 ### DeleteEventInCalendar(int eventId)
