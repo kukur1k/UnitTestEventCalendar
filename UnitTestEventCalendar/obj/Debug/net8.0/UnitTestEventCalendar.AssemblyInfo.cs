@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnitTestEventCalendar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+570050ddad6a69a74160e5dd11ce0cb00fec1766")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+491ef15a1ace54a05474e603c6d86d310b32cab2")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnitTestEventCalendar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnitTestEventCalendar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,3 +10,15 @@ D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\
 D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.pdb
 D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\ref\EventCalendarManagementLib.dll
 D:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.sourcelink.json
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\bin\Debug\net8.0\EventCalendarManagementLib.deps.json
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\bin\Debug\net8.0\EventCalendarManagementLib.dll
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\bin\Debug\net8.0\EventCalendarManagementLib.pdb
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.AssemblyInfoInputs.cache
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.AssemblyInfo.cs
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.csproj.CoreCompileInputs.cache
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.sourcelink.json
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.dll
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\refint\EventCalendarManagementLib.dll
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\EventCalendarManagementLib.pdb
+C:\C#_Project\UnitTestEventCalendar\EventCalendarManagementLib\obj\Debug\net8.0\ref\EventCalendarManagementLib.dll
