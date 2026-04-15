@@ -149,3 +149,7 @@ event1 = new CalendarManagerLibrary.Event(
 
 ## Рефакторинг кода
 В коде бибилиотеки для повышения читаемости был проведен рефакторинг
+
+## Полезные ссылки
+- [Документация Microsoft по C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/)
+- [Руководство по NUnit](https://nunit.org/)
