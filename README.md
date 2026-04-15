@@ -122,7 +122,17 @@
 ## Использование
 Для использования библиотеки `CalendarManagment` необходимо добавить ссылку на DLL в проект. После этого можно создавать экземпляры класса Event, экземпляр класса `CalendarManagment`, и добавлять в него события, чтобы  в дальнейшем работать с ними
 
-
+## Пример работы 
+### Пример инициализации события
+```csharp
+event1 = new CalendarManagerLibrary.Event(
+        "Event1",
+        "Is event number 1",
+        new DateTime(2026, 7, 20, 18, 30, 25),
+        TypesEvent.Holiday,
+        "Orginezer 1",
+        new List<string> { "participant 1", "participant 2", "participant 3" });
+```
 
 ## Тестирование
 Библиотека `CalendarManagment` включает в себя набор автоматизированных тестов, реализованных с использованием фреймворка NUnit. Тесты находятся в классе `TestCalendar` и охватывают следующие аспекты:
